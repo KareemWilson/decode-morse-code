@@ -46,7 +46,7 @@ puts decode_char('-...')
 
 def decode_word(morse_word)
     word_arr = morse_word.split
-    word = ' '
+    word = ''
     word_arr.each do |char| 
         word = word + decode_char(char)
     end
@@ -54,11 +54,11 @@ def decode_word(morse_word)
 end
 
 def decode_bottle(morse_bottle)
-    bottle_arr = morse_bottle.split(' ')
-    bottle = ' '
+    bottle_arr = morse_bottle.split('  ')
+    bottle = ''
     bottle_arr.each do |n|
-        bottle = bottle + decode_word(n)
-        # bottle += ' '
+        bottle += decode_word(n)
+        bottle += ' '
     end
     bottle
 end
